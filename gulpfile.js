@@ -5,7 +5,8 @@ var fs = require('fs'),
     header = require('gulp-header'),
     footer = require('gulp-footer'),
     rename = require('gulp-rename'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    sass   = require('gulp-sass');
 
 gulp.task('templates', function() {
     return gulp.src(['src/templates/*.jade'])
@@ -19,10 +20,16 @@ gulp.task('prepare', function() {
                .pipe(gulp.dest('build/'));
 })
 
+gulp.task('sass', function () {
+  gulp.src('./style/stylesheets/sass/**/*.sass')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('./style/stylesheets'));
+});
+
 var jadeDefinition = fs.readFileSync('node_modules/jade/runtime.js').toString();
 var license = fs.readFileSync('license.txt').toString();
 
-gulp.task('scripts', ['prepare', 'templates'], function() {
+gulp.task('scripts', ['prepare', 'templates', 'sass'], function() {
     gulp.src(['build/main.js'])
         .pipe(browserify())
         .pipe(concat('betterttv.js'))
@@ -34,7 +41,7 @@ gulp.task('scripts', ['prepare', 'templates'], function() {
 });
 
 gulp.task('watch', ['default'], function() {
-    gulp.watch('src/**/*', ['default']);
+    gulp.watch(['src/**/*', './style/stylesheets/sass/**/*.sass'], ['default']);
 });
 
 gulp.task('default', ['scripts']);
