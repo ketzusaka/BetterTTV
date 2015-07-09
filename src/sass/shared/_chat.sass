@@ -1,30 +1,76 @@
 #right_col
     .resizer
-        position: absolute;
-        left: -2px;
-        bottom: 0px;
-
-        width: 7px;
-        height: 100%;
-
-        z-index: 9001;
-        cursor: e-resize;
+        position: absolute
+        left: -2px
+        bottom: 0px
+        width: 7px
+        height: 100%
+        z-index: 9001
+        cursor: e-resize
 
 .ember-chat
     .badges
-        display: inline-block;
+        display: inline-block
+        background-position: 0 center
+        background-repeat: no-repeat
 
         .badge
-            margin-bottom: 1px;
-            border-radius: 2px;
-            float: none;
+            margin-bottom: 1px
+            border-radius: 2px
+            float: none
+
+        .bot
+            text-indent: 21px
+            background-image: url(../../tags/bot.png)
+            vertical-align: bottom
+            height: 18px
+            min-width: 18px
+            width: 18px
+            padding: 0
+            margin-bottom: 1px
+            text-indent: -9999px
+            border-radius: 2px
+            -moz-border-radius: 2px
+            -webkit-border-radius: 2px
+            overflow: hidden
+
+        .bttv
+            &-developer
+                cursor: pointer
+                background-size: 100%
+                background: url("../../tags/badge-dev.svg")
+            &-supporter
+                cursor: pointer
+                background-size: 100%
+                background: url("../../tags/badge-support.svg")
+        .old
+            &moderator, &staff, &admin, &broadcaster, &bot, &global-moderator
+                padding: 2px 3px
+                text-indent: none
+                color: white
+                font-size: 0.8572em
+                font-weight: bold
+                border-radius: 2px
+                display: inline
+            &moderator
+                background-color: #009900
+            &staff
+                background-color: #6441a5
+            &admin
+                background-color: #FF0000
+            &broadcaster
+                background-color: #000000
+            &bot
+                background-color: #666666
+            &global-moderator
+                background-color: #0c6f20
 
     .chat-interface
-        padding: 15px;
+        padding: 15px
 
         .textarea-contain
-            margin-bottom: 5px;
+            margin-bottom: 5px
 
         .more-messages-indicator
-            left: 0px;
-            right: 0px;
+            left: 0px
+            right: 0px
