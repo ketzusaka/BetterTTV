@@ -278,7 +278,6 @@
     background: url("../../tags/badge-support.svg"); }
   .ember-chat .badges .oldmoderator, .ember-chat .badges .oldstaff, .ember-chat .badges .oldadmin, .ember-chat .badges .oldbroadcaster, .ember-chat .badges .oldbot, .ember-chat .badges .oldglobal-moderator {
     padding: 2px 3px;
-    text-indent: none;
     color: white;
     font-size: 0.8572em;
     font-weight: bold;
@@ -296,6 +295,15 @@
     background-color: #666666; }
   .ember-chat .badges .oldglobal-moderator {
     background-color: #0c6f20; }
+  .ember-chat .badges .alpha {
+    background-color: transparent; }
+  .ember-chat .badges .invert {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='invert'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+    -moz-filter: invert(100%); }
 
 .ember-chat .chat-interface {
   padding: 15px; }
