@@ -1,0 +1,72 @@
+.badges
+    display: inline-block
+    background-position: 0 center
+    background-repeat: no-repeat
+
+    .badge
+        margin-bottom: 1px
+        border-radius: 2px
+        float: none
+
+    .bot
+        text-indent: 21px
+        background-image: url(../../tags/bot.png)
+        vertical-align: bottom
+        height: 18px
+        min-width: 18px
+        width: 18px
+        padding: 0
+        margin-bottom: 1px
+        text-indent: -9999px
+        border-radius: 2px
+        -moz-border-radius: 2px
+        -webkit-border-radius: 2px
+        overflow: hidden
+
+    .bttv
+        &-developer
+            cursor: pointer
+            background-size: 100%
+            background: url("../../tags/badge-dev.svg")
+
+        &-supporter
+            cursor: pointer
+            background-size: 100%
+            background: url("../../tags/badge-support.svg")
+
+    .old
+        &moderator, &staff, &admin, &broadcaster, &bot, &global-moderator
+            padding: 2px 3px
+            color: white
+            font-size: 0.8572em
+            font-weight: bold
+            border-radius: 2px
+            display: inline
+
+        &moderator
+            background-color: #009900
+
+        &staff
+            background-color: #6441a5
+
+        &admin
+            background-color: #FF0000
+
+        &broadcaster
+            background-color: #000000
+
+        &bot
+            background-color: #666666
+
+        &global-moderator
+            background-color: #0c6f20
+    .alpha
+        background-color: transparent
+
+    .invert
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert")
+        filter: invert(100%)
+        -webkit-filter: invert(100%)
+        -o-filter: invert(100%)
+        -ms-filter: invert(100%)
+        -moz-filter: invert(100%)
