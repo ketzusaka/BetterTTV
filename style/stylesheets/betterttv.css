@@ -305,6 +305,10 @@
     -ms-filter: invert(100%);
     -moz-filter: invert(100%); }
 
+.ember-chat .chat-line.highlight {
+  color: #000;
+  background-color: rgba(255, 0, 0, 0.5); }
+
 .ember-chat .chat-interface {
   padding: 15px; }
   .ember-chat .chat-interface .textarea-contain {
