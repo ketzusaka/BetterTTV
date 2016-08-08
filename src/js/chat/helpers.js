@@ -322,11 +322,7 @@ exports.tabCompletion = function(e) {
 
         sentence.push(user);
 
-        if (sentence.length === 1 && !isEmote) {
-            $chatInput.val(sentence.join(' ') + ', ');
-        } else {
-            $chatInput.val(sentence.join(' '));
-        }
+        $chatInput.val(sentence.join(' '));
     }
 };
 
